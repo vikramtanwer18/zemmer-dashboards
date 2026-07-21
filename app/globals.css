@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  /* GymOS Color Palette */
+  --color-primary: #004ac6;
+  --color-primary-container: #2563eb;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #eeefff;
+  
+  --color-secondary: #495c95;
+  --color-secondary-container: #acbfff;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-container: #394c84;
+
+  --color-tertiary: #943700;
+  --color-tertiary-container: #bc4800;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-container: #ffede6;
+
+  --color-surface: #f8f9ff;
+  --color-on-surface: #0d1c2e;
+  --color-surface-variant: #d5e3fc;
+  --color-on-surface-variant: #434655;
+  
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #eff4ff;
+  --color-surface-container: #e6eeff;
+  --color-surface-container-high: #dce9ff;
+  --color-surface-container-highest: #d5e3fc;
+
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+  --color-on-error: #ffffff;
+  --color-on-error-container: #93000a;
+
+  --color-outline: #737686;
+  --color-outline-variant: #c3c6d7;
+
+  /* Elevation and Shadows */
+  --shadow-atmospheric: 0 8px 32px rgba(13, 28, 46, 0.06);
+
+  /* Border Radius */
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+}
+
+:root {
+  --background: #f8f9ff;
+  --foreground: #0d1c2e;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+.ghost-border {
+  border: 1px solid rgba(195, 198, 215, 0.15);
+}
+
+/* Hide native date picker icon to allow for custom high-fidelity icons */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+  z-index: 20;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
